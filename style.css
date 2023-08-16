@@ -1,0 +1,65 @@
+* {
+  margin: 0px;
+}
+
+@font-face{
+  font-family: GOT;
+  src: url('./Game\ of\ Thrones.ttf');
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: rgb(0, 27, 66);
+}
+
+header h1 {
+  color: white;
+  font-family: GOT;
+  font-weight: 80;
+  
+
+}
+
+.searching {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30%;
+}
+
+.searching p {
+  margin: 10px;
+  align-self: center;
+}
+
+.searching button {
+  margin: 10px;
+}
+
+.searching input {
+  margin: 10px;
+  height: 30px;
+  border-radius: 0px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+}
+
+.searching input:focus {
+  background-color: rgb(233, 233, 233);
+  margin: 10px;
+  height: 30px;
+  border-radius: 0px;
+  outline: 0;
+}
+
+.searching img {
+  width: 350px;
+  height: 350px;
+  border-radius: 300px;
+  object-fit: cover;
+  align-self: center;
+}
