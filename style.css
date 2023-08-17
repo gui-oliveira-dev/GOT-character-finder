@@ -36,11 +36,14 @@ header h1 {
 
 /* Main section */
 
-.section-finder {
+main {
   margin: 20px;
   background-color: rgba(255, 255, 255, 0.842);
-  padding-bottom: 100px;
   border-radius: 40px;
+}
+
+.section-finder {
+  padding-bottom: 20px;
 }
 
 /* Seção de pesquisa */
@@ -123,4 +126,25 @@ header h1 {
 
 #search-result .error-message {
   color: rgb(173, 60, 60);
+}
+
+/* Seção de História do personagem */
+
+#history{
+  display: flex;
+  padding: 20px 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#history h2{
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 10px;
+}
+
+#history p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: large;
 }
