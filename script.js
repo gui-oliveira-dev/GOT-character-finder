@@ -122,7 +122,7 @@ function findCharacter() {
   let characterName = '';
 
   if (personagem.value === '') {
-    throw new Error('Digite um personagem')
+    throw new Error('Para fazer a pesquisa você precisa digitar um personagem')
   }
   for (let index = 0; index < personagens.length; index += 1) {
     if (personagem.value === personagens[index].nome) {
@@ -131,7 +131,7 @@ function findCharacter() {
     }
   }
   if (characterName != personagem.value) {
-    throw new Error('Personagem não encontrado')
+    throw new Error('Personagem não encontrado, digite um personagem válido')
   }
 }
 
@@ -142,11 +142,17 @@ function printCharacter() {
     Familia: ${data.casa}
     Caracteristicas: ${data.personalidade}
     Idade: ${data.idade}`
+    resultado.classList.remove('error-message')
+    image.classList.remove('no-image')
+    image.classList.add('image-found')
     image.src = data.imagem
 
   } catch (error) {
     image.src = ""
     resultado.innerText = error.message
+    resultado.classList.add('error-message')
+    image.classList.remove('image-found')
+    image.classList.add('no-image')
   } finally {
     personagem.value = ''
   }

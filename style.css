@@ -2,64 +2,125 @@
   margin: 0px;
 }
 
-@font-face{
+@font-face {
   font-family: GOT;
   src: url('./Game\ of\ Thrones.ttf');
 }
 
-header {
+body {
+  background-image: url('https://images2.alphacoders.com/126/1260061.jpg');
+  background-size: cover;  
+  background-position: top;
+}
+
+/* Cabeçalho */
+
+header{
   display: flex;
+  background-color: rgb(0, 27, 58);
+  margin: 0px;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  background-color: rgb(0, 27, 66);
+  padding: 30px;
 }
 
 header h1 {
-  color: white;
   font-family: GOT;
-  font-weight: 80;
-  
-
+  font-weight: 100;
+  color: white;
 }
 
-.searching {
+.section-finder {
+  display: flex;
+  margin-top: 50px;
+}
+
+/* Main section */
+
+.section-finder {
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.842);
+  padding-bottom: 100px;
+  border-radius: 40px;
+}
+
+/* Seção de pesquisa */
+#search-area {
+  display: flex;
+  padding-top: 80px;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+#search-area p {
+  margin: 20px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#search-area input {
+  margin: 20px;
+  width: 50%;
+  text-align: center;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid rgb(55, 82, 134);
+}
+
+#search-area input:focus {
+  outline: none;
+  background-color: rgb(238, 238, 238);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+#search-area button {
+  background-color: rgb(0, 27, 58) ;
+  width: 50%;
+  height: 40px;
+  color: white;
+  font-size: x-large;
+  font-family: GOT;
+  border: none;
+  border-radius: 10px;
+}
+
+#search-area button:hover {
+  cursor: pointer;
+  background-color: rgb(2, 40, 83) ;
+}
+
+/* Seção de resultados */
+#search-result {
   display: flex;
   flex-direction: column;
-  padding: 40px 30%;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
-.searching p {
-  margin: 10px;
-  align-self: center;
-}
-
-.searching button {
-  margin: 10px;
-}
-
-.searching input {
-  margin: 10px;
-  height: 30px;
-  border-radius: 0px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-
-}
-
-.searching input:focus {
-  background-color: rgb(233, 233, 233);
-  margin: 10px;
-  height: 30px;
-  border-radius: 0px;
-  outline: 0;
-}
-
-.searching img {
-  width: 350px;
-  height: 350px;
-  border-radius: 300px;
+#search-result .image-found {
   object-fit: cover;
-  align-self: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 80px;
+  padding: 30px;
+  justify-self: flex-start;
+}
+
+#search-result .no-image {
+  width: 0px;
+  height: 0px;
+}
+
+#search-result p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#search-result .error-message {
+  color: rgb(173, 60, 60);
 }
