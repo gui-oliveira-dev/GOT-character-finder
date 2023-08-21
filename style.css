@@ -150,23 +150,39 @@ main {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    text-align: center;
+    font-size: 12px;
+  }
+  
   .section-finder {
     flex-direction: column;
   }
 
   #search-area {
+    align-self: center;
     width: 90%;
-    border: 2px solid red;
     text-align: center;
+  }
+
+  #search-area input {
+    width: 90%;
+  }
+
+  #search-area p {
+    padding: 0px;
+    font-size: larger;
   }
 
   #search-area button {
     font-size: large;
+    width: 90%;
   }
 
   #search-result {
     width: 90%;
     text-align: center;
+    align-self: center;
   }
 
   #search-result .image-found {
