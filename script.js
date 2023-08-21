@@ -145,8 +145,12 @@ const resultado = document.querySelector('#result');
 const historia = document.getElementById('history-text')
 const historiaTitle = document.getElementById('history-title')
 
+function prevDef(event) {
+  event.preventDefault()
+}
 
 function findCharacter() {
+  
   let characterName = '';
 
   if (personagem.value === '') {
@@ -191,4 +195,5 @@ function printCharacter() {
   }
 }
 
+button.addEventListener('click', prevDef)
 button.addEventListener('click', printCharacter)
